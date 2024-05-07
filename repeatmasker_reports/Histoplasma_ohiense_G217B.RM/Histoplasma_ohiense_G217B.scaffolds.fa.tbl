@@ -1,0 +1,60 @@
+==================================================
+file name: Histoplasma_ohiense_G217B.scaffolds.fa
+sequences:            12
+total length:   39447273 bp  (39447273 bp excl N/X-runs)
+GC level:         42.63 %
+bases masked:   14135794 bp ( 35.83 %)
+==================================================
+               number of      length   percentage
+               elements*    occupied  of sequence
+--------------------------------------------------
+Retroelements         5766     12300581 bp   31.18 %
+   SINEs:                0            0 bp    0.00 %
+   Penelope:             0            0 bp    0.00 %
+   LINEs:              924      1974192 bp    5.00 %
+    CRE/SLACS            0            0 bp    0.00 %
+     L2/CR1/Rex          0            0 bp    0.00 %
+     R1/LOA/Jockey       0            0 bp    0.00 %
+     R2/R4/NeSL         48        19988 bp    0.05 %
+     RTE/Bov-B           0            0 bp    0.00 %
+     L1/CIN4             0            0 bp    0.00 %
+   LTR elements:      4842     10326389 bp   26.18 %
+     BEL/Pao             0            0 bp    0.00 %
+     Ty1/Copia         310       331561 bp    0.84 %
+     Gypsy/DIRS1      4532      9994828 bp   25.34 %
+       Retroviral        0            0 bp    0.00 %
+
+DNA transposons        643       594718 bp    1.51 %
+   hobo-Activator      419       488955 bp    1.24 %
+   Tc1-IS630-Pogo       81        38864 bp    0.10 %
+   En-Spm                0            0 bp    0.00 %
+   MULE-MuDR             0            0 bp    0.00 %
+   PiggyBac             37        10380 bp    0.03 %
+   Tourist/Harbinger     0            0 bp    0.00 %
+   Other (Mirage,        0            0 bp    0.00 %
+    P-element, Transib)
+
+Rolling-circles        129       180896 bp    0.46 %
+
+Unclassified:         1975       469747 bp    1.19 %
+
+Total interspersed repeats:    13365046 bp   33.88 %
+
+
+Small RNA:               0            0 bp    0.00 %
+
+Satellites:              0            0 bp    0.00 %
+Simple repeats:      12403       479428 bp    1.22 %
+Low complexity:       2083       110424 bp    0.28 %
+==================================================
+
+* most repeats fragmented by insertions or deletions
+  have been counted as one element
+  Runs of >=20 X/Ns in query were excluded in % calcs
+
+
+RepeatMasker version 4.1.5 , sensitive mode
+                                      
+run with rmblastn version 2.14.1+
+The query was compared to classified sequences in ".../Histoplasma_ohiense_G217B-families.fa"
+FamDB: 
