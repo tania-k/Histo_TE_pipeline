@@ -10,7 +10,7 @@
 * Clipkit v.2.0+
 * R (I used v.4.3.2)
 * EDTA environment v2.1.3
-* samples.csv file (observe my copy to establish your own)
+* strains.csv file (observe my copy to establish your own)
 
 
 2. Use repeatmodeler pipeline/00_repeatmodeler.sh and build repeat libraries for each genome. Scripts are written to run iteratively with variables pulled from your samples.csv file.
