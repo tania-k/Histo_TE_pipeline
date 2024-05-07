@@ -37,7 +37,7 @@ Many choose one or the other program, many leaning to EDTA as it's easier.
 
 This is up to your descretion.
 
-4. Once analysis and summaries are complete, look through and run scripts/analyze_TE_tree_phylo_signal.R on your RStudio (or however you analyze your data)
+4. Once analysis and summaries are complete, look through and run `scripts/analyze_TE_tree_phylo_signal.R` on your RStudio (or however you analyze your data)
 This document is my working horse, where I hard coded a lot of work. I apologize for not making this more streamlined but the gist of my analysis is here.
 I will also send you my tree building repository, but if you have your method of tree generation and tree output, please use your method instead as your hypotheses questions may differ.
 Inside you will find my TE pulling/adding script which helps identify, add, and calculate the percentage of each TE against the genome length for each isolate.
