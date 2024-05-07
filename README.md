@@ -2,6 +2,8 @@
 ## How to run TE Analysis using this pipeline
 1. Build the proper environment to run your analysis. You might need to create separate environments as not all are compatable with each other.
  You will need: 
+
+```
 * Annotated genomes
 * RepeatMasker v.4.0+
 * RepeatModeler v.2.0+
@@ -11,7 +13,7 @@
 * R (I used v.4.3.2)
 * EDTA environment v2.1.3
 * strains.csv file (observe my copy to establish your own)
-
+```
 
 2. Use repeatmodeler pipeline/00_repeatmodeler.sh and build repeat libraries for each genome. Scripts are written to run iteratively with variables pulled from your samples.csv file.
 
