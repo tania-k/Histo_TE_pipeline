@@ -1,0 +1,127 @@
+RepeatModeler Version 2.0.3
+===========================
+Using output directory = /work/users/t/a/taniak/Annotation/RM_1420387.WedNov11328342023
+Search Engine = rmblast 2.14.1+
+Dependencies: TRF 4.10, RECON , RepeatScout 1.0.5, RepeatMasker 
+LTR Structural Analysis: Disabled [use -LTRStruct to enable]
+Random Number Seed: 1698859714
+Database = repeat_library/Histoplasma_ohiense_HCG217B   - Sequences = 5658
+  - Bases = 33872679
+  - N50 = 11854
+  - Contig Histogram:
+  Size(bp)                                                        Count
+  -----------------------------------------------------------------------
+  73338-78541 |                                                   [ 1 ]
+  68135-73337 |                                                   [  ]
+  62932-68134 |                                                   [ 1 ]
+  57730-62932 |                                                   [ 3 ]
+  52527-57729 |                                                   [ 3 ]
+  47324-52526 |                                                   [ 7 ]
+  42121-47323 |                                                   [ 19 ]
+  36919-42121 |                                                   [ 28 ]
+  31716-36918 |                                                   [ 32 ]
+  26513-31715 |                                                   [ 61 ]
+  21310-26512 |*                                                  [ 127 ]
+  16108-21310 |**                                                 [ 223 ]
+  10905-16107 |*****                                              [ 396 ]
+  5702-10904  |************                                       [ 938 ]
+  500-5702    |************************************************** [ 3819 ]
+
+Storage Throughput = poor ( 249.38 MB/s )
+  - NOTE: Poor storage througput will have a large impact on RepeatModeler
+          performance.  The low throughput observed above may be due to
+          transient usage patterns on the system and may not reflect the
+          actual system performance. Whenever possible run RepeatModeler
+          in a directory stored on a fast local disk and not over a
+          network filesytem.
+
+
+RepeatModeler Round # 1
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 40000000 bp
+   - Final Sample Size = 33872626 bp ( 33871097 non ambiguous )
+   - Num Contigs Represented = 5658
+   - Sequence extraction : 00:00:03 (hh:mm:ss) Elapsed Time
+ -- Running RepeatScout on the sequences...
+   - RepeatScout: 00:09:11 (hh:mm:ss) Elapsed Time
+NOTE: RepeatScout did not return any models.
+
+
+RepeatModeler Round # 2
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 3000000 bp
+   - Sequence extraction : 00:00:00 (hh:mm:ss) Elapsed Time
+ -- Running TRFMask on the sequence...
+   - TRFMask time 00:00:06 (hh:mm:ss) Elapsed Time
+ -- Sample Stats:
+       Sample Size 3015425 bp
+       Num Contigs Represented = 489
+       Non ambiguous bp:
+             Initial: 3015365 bp
+             After Masking: 2997641 bp
+             Masked: 0.59 % 
+ -- Input Database Coverage: 3015425 bp out of 33872679 bp ( 8.90 % )
+Sampling Time: 00:00:07 (hh:mm:ss) Elapsed Time
+Running all-by-other comparisons...
+Comparison Time: 00:02:19 (hh:mm:ss) Elapsed Time, 55996 HSPs Collected
+Round Time: 00:19:52 (hh:mm:ss) Elapsed Time
+
+
+RepeatModeler Round # 3
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 9000000 bp
+   - Sequence extraction : 00:00:01 (hh:mm:ss) Elapsed Time
+ -- Running TRFMask on the sequence...
+   - TRFMask time 00:00:14 (hh:mm:ss) Elapsed Time
+ -- Masking repeats from the previous rounds...
+   - TE Masking time 00:00:33 (hh:mm:ss) Elapsed Time
+ -- Sample Stats:
+       Sample Size 9015220 bp
+       Num Contigs Represented = 1472
+       Non ambiguous bp:
+             Initial: 9014775 bp
+             After Masking: 6768939 bp
+             Masked: 24.91 % 
+ -- Input Database Coverage: 12030645 bp out of 33872679 bp ( 35.52 % )
+Sampling Time: 00:00:50 (hh:mm:ss) Elapsed Time
+Running all-by-other comparisons...
+Comparison Time: 00:08:01 (hh:mm:ss) Elapsed Time, 21779 HSPs Collected
+Round Time: 00:32:55 (hh:mm:ss) Elapsed Time
+
+
+RepeatModeler Round # 4
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 27000000 bp
+   - Sequence extraction : 00:00:01 (hh:mm:ss) Elapsed Time
+ -- Running TRFMask on the sequence...
+   - TRFMask time 00:00:39 (hh:mm:ss) Elapsed Time
+ -- Masking repeats from the previous rounds...
+   - TE Masking time 00:02:58 (hh:mm:ss) Elapsed Time
+ -- Sample Stats:
+       Sample Size 21841893 bp
+       Num Contigs Represented = 3718
+       Non ambiguous bp:
+             Initial: 21840869 bp
+             After Masking: 15205691 bp
+             Masked: 30.38 % 
+ -- Input Database Coverage: 33872538 bp out of 33872679 bp ( 100.00 % )
+Sampling Time: 00:03:40 (hh:mm:ss) Elapsed Time
+Running all-by-other comparisons...
+Comparison Time: 00:38:59 (hh:mm:ss) Elapsed Time, 36869 HSPs Collected
+Round Time: 01:20:24 (hh:mm:ss) Elapsed Time
+
+RepeatScout/RECON discovery complete: 62 families found
+
+
+Classification Time: 00:07:21 (hh:mm:ss) Elapsed Time
+
+
+Program Time: 02:29:46 (hh:mm:ss) Elapsed Time
