@@ -2634,13 +2634,19 @@ library(dplyr)
 library(ape)
 library(phytools)
 library(picante)
+library(readr)
+library(reshape2)
 
 # AA TREE
 tree_AAB<-read.tree("/nas/longleaf/home/taniak/taniak/Tree_Construction_PHYling/Trial5.AA-Blast/combined_top50.partition.ULTRA.contree.nw")
 tree_AAB
 is.ultrametric(tree_AAB)
+ggtree(tree_AAB) + geom_nodelab(size = 3, na.rm = TRUE, nudge_x = 0.008)
 
-Percentage_B <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/Percentage_B.tsv")
+
+
+#Percentage_B <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/Percentage_BB.tsv")
+Percentage_B <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/Percentage_BBS.tsv")
 Percentage_B<- as.data.frame(Percentage_B)
 Percentage_B[is.na(Percentage_B)] <- 0
 
@@ -2684,7 +2690,7 @@ PERC_SUM_melt_B<- melt(Percentage_B, id.vars="class",
                                         "Histoplasma capsulatum 19VMG15","Histoplasma suramericanum SECH_105_21_14"))
 
 
-pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Stacked_barplot_Blast.pdf', width=15, height=20)
+pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Stacked_barplot_Blast_Star.pdf', width=15, height=20)
 
 ggplot(PERC_SUM_melt_B, (aes(x=variable, y=value, fill=class))) + geom_bar(position="stack", stat="identity") + coord_flip() + 
   labs(title = "Histoplasma Isolates TE", y = "Percentage of TE per Genome", x = "Histoplasma Isolates") +
@@ -2696,7 +2702,7 @@ dev.off()
 #also need a more complex detailed stacked barplot
 library(reshape2) 
 
-Summ_GL_RE <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/Sum_GL_RE_mb_sub.txt")
+Summ_GL_RE <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/SUM_Star_GL_TE.txt")
 Summ_GL_RE_melt <- melt(Summ_GL_RE, id.vars="values", 
                            measure.vars=c("Histoplasma capsulatum 19VMG15","Histoplasma capsulatum HISSP-CM7256",
                                           "Histoplasma capsulatum Histo-485P20","Histoplasma capsulatum JB_01752-Hc_01752",
@@ -2740,18 +2746,21 @@ Summ_GL_RE_melt <- melt(Summ_GL_RE, id.vars="values",
                                           "Histoplasma capsulatum CB066","Histoplasma capsulatum CB168","Histoplasma capsulatum CB174",
                                           "Histoplasma capsulatum CB180","Histoplasma capsulatum CB186","Histoplasma capsulatum CB192",
                                           "Histoplasma capsulatum Dr_Anuradha_Fungal_WGS_S11","Histoplasma capsulatum Dr_Anuradha_Fungal_WGS_S14",
-                                          "Histoplasma capsulatum Dr_Anuradha_Fungal_WGS_S16","Blastomyces parvus UAMH130"))
+                                          "Histoplasma capsulatum Dr_Anuradha_Fungal_WGS_S16"))
 
-pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Summ_GL_RE_blast2.pdf', width=15, height=20)
-Stack_GL_TE <- ggplot(Summ_GL_RE_melt, (aes(x=variable, y=value, fill=values)))+ geom_bar(position="stack", stat="identity") + 
-  coord_flip() + labs(title = "Histoplasma Repetative Elements vs Genome Length", y = "Genome Assembly (Mb)", x = "Histoplasma Isolates") + 
+pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Star_TE_GL.pdf', width=15, height=20)
+ggplot(Summ_GL_RE_melt, (aes(x=variable, y=value, fill=values)))+ geom_bar(position="stack", stat="identity") + 
+  coord_flip() + labs(title = "Histoplasma Repetative Elements & Starships vs Genome Length", y = "Genome Assembly (Mb)", x = "Histoplasma Isolates") + 
   theme(legend.position = 'bottom') + scale_fill_brewer(palette = "Paired")
 dev.off()
 
 Stack_GL_TE
 
-pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Summ_GL_RE_blast.pdf', width=15, height=20)
-Stack_GL_TE + geom_facet(panel = "TE Abundance", data = PERC_SUM_melt_B2, geom = geom_col, aes(x = value, color = class, fill = class), orientation = 'y', width = .6) 
+library("ggplot2")
+library("ggtree")
+
+pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Star_TE_GL.pdf', width=15, height=20)
+Stack_GL_TE + geom_facet(panel = "TE Abundance", data = Summ_GL_RE_melt, geom = geom_col, aes(x = value, color = value, fill = value), orientation = 'y', width = .6) 
 dev.off()
 
 
@@ -2862,7 +2871,7 @@ ggtree(tree_AAB, layout = "fan")
 
 # Visualize the tree
 p_AABBB1 <- ggtree(tree_AAB, layout = "rectangular") + geom_tiplab(size = 3, fontface = 3, align=TRUE) +
-  theme_tree2() + theme(legend.position = "none")
+  theme_tree2() + theme(legend.position = "none") 
 print(p_AABBB1)
 # Save the tree as a PDF
 ggsave("AAB_ultrametric_tree.pdf", p_AAB, width = 20, height = 5, dpi = 150)
@@ -2874,26 +2883,154 @@ colnames(Percentage_B)[which(colnames(Percentage_B)  %in% tree_AAB$tip.label==F)
 colnames(PERC_SUM_melt_B)
 PERC_SUM_melt_B2 <- PERC_SUM_melt_B[,c(2,1,3)]
 
-#pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Tree_fan_Stacked_barplot_AAB-new.pdf', width=15, height=15)
+#pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Tree_fan_Stacked_barplot_AAB-Star.pdf', width=15, height=15)
 
 p_AABBB2 <- p_AABBB1 + geom_facet(panel = "TE Abundance", data = PERC_SUM_melt_B2, geom = geom_col, 
                                 aes(x = value, color = class, 
                                     fill = class), orientation = 'y', width = .6) + geom_nodelab(size = 3, na.rm = TRUE, nudge_x = 0.05) +
-  theme_tree2(legend.position=c(.95, .25)) + xlim_expand(c(0,0.8), 'TE Abundance') + xlim_expand(c(0, 4), 'Tree')
+  theme_tree2(legend.position=c(.95, .25)) + xlim_expand(c(0,0.8), 'TE Abundance') + xlim_expand(c(0, 4), 'Tree') + geom_cladelabel(node=140, label="NAm1", color="red", offset = 1.5) +
+  geom_cladelabel(node=160, label="NAm2", color="#808000", offset = 1.5) + geom_cladelabel(node=172, label="India", color="blue", offset = 1.5) + geom_cladelabel(node=113, label="Africa", color="#FFA500", offset = 1.5) +
+  geom_cladelabel(node=105, label="LAmA", color="purple", offset = 1.5) + geom_cladelabel(node=121, label="LAmA", color="purple", offset = 1.5) + geom_cladelabel(node=187, label="LAmA", color="purple", offset = 1.5) +
+  geom_cladelabel(node=191, label="Africa", color="#FFA500", offset = 1.5) + geom_cladelabel(node=137, label="LAmA", color="purple", offset = 1.5) + geom_cladelabel(node=1, label="Root", color="green", offset = 1.5)
 
 #dev.off()
 
-pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Tree_fan_Stacked_barplotAAB-new.pdf', width=15, height=15)
+pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Tree_Stacked_barplotAAB-LINES_STAR.pdf', width=15, height=15)
 
 facet_widths(p_AABBB2, widths = c(1, 0.40))
 
 dev.off()
 
-png(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Tree_fan_Stacked_barplotAAB-new.png', width=1700, height=1500, res=100)
+png(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Tree_fan_Stacked_barplotAAB-LINES_STAR.png', width=1700, height=1500, res=100)
 
 facet_widths(p_AABBB2, widths = c(1, 0.40))
 
 dev.off()
+
+#if you need to figure out what the nodes are in your tree
+NODES_TREE<-ggtree(tree_AAB) + geom_text(aes(label=node), hjust=-.3)
+
+## Starship Data Visualization
+
+StarHisto <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/starship_count2.tsv")
+
+#melt data
+Star_melt<- melt(StarHisto, id.vars="class", 
+                      measure.vars=c("Histoplasma_capsulatum_19VMG-15",
+                                     "Histoplasma_capsulatum_HISSP-CM7256",
+                                     "Histoplasma_capsulatum_Histo-485P20",
+                                     "Histoplasma_capsulatum_JB_01752-Hc_01752",
+                                     "Histoplasma_capsulatum_JB_021091-Hc_021091",
+                                     "Histoplasma_capsulatum_JB_031837-Hc_031837",
+                                     "Histoplasma_capsulatum_JB_042430-Hc_042430",
+                                     "Histoplasma_capsulatum_JB_062632-Hc_062632",
+                                     "Histoplasma_capsulatum_JB_062775-Hc_062775",
+                                     "Histoplasma_capsulatum_JB_073129-Hc_073129",
+                                     "Histoplasma_capsulatum_JB_083285_2-Hc_083285_2",
+                                     "Histoplasma_capsulatum_SECH_100-Nam2_G186A",
+                                     "Histoplasma_capsulatum_SECH_101-Nam2_G184A",
+                                     "Histoplasma_mississippiense_SECH_102Nam2_505",
+                                     "Histoplasma_suramericanum_SECH_103-Nam2_3_11G",
+                                     "Histoplasma_suramericanum_SECH_104-Nam2_27_14",
+                                     "Histoplasma_suramericanum_SECH_105-Nam2_21_14",
+                                     "Histoplasma_capsulatum_SECH_107-mis_Hc_duboisii-B",
+                                     "Histoplasma_capsulatum_SECH_109",
+                                     "Histoplasma_capsulatum_SECH_110",
+                                     "Histoplasma_mississippiense_SECH_81-Nam1_WU24",
+                                     "Histoplasma_ohiense_SECH_82-Nam1_CI_4",
+                                     "Histoplasma_mississippiense_SECH_83-Nam1_CI_7",
+                                     "Histoplasma_mississippiense_SECH_84-Nam1_CI_19",
+                                     "Histoplasma_mississippiense_SECH_85-Nam1_CI_22",
+                                     "Histoplasma_mississippiense_SECH_86-Nam1_CI_24",
+                                     "Histoplasma_mississippiense_SECH_87-Nam1_CI_42",
+                                     "Histoplasma_mississippiense_SECH_88-Nam1_CI_43",
+                                     "Histoplasma_mississippiense_SECH_89-Nam1_UCLA-531",
+                                     "Histoplasma_mississippiense_SECH_90-Nam1_DOWNS",
+                                     "Histoplasma_ohiense_SECH_91-Nam2_G217B",
+                                     "Histoplasma_ohiense_SECH_92-Nam2_G222B",
+                                     "Histoplasma_ohiense_SECH_93.Nam2_CI_6",
+                                     "Histoplasma_ohiense_SECH_94-Nam2_CI_9",
+                                     "Histoplasma_ohiense_SECH_95.Nam2_CI_10",
+                                     "Histoplasma_ohiense_SECH_96.Nam2_CI_17",
+                                     "Histoplasma_ohiense_SECH_97-Nam2_CI_18",
+                                     "Histoplasma_ohiense_SECH_98.Nam2_CI_30",
+                                     "Histoplasma_ohiense_SECH_99-Nam2_CI_35",
+                                     "Histoplasma_capsulatum_HCH143",
+                                     "Histoplasma_capsulatum_NACVFR_Histo_HC1070058",
+                                     "Histoplasma_capsulatum_HISSP-FGTRO0285",
+                                     "Histoplasma_capsulatum_HISSP-FGPSO2043",
+                                     "Histoplasma_capsulatum_HISSP-FGPIE2055",
+                                     "Histoplasma_capsulatum_HISSP-FGPIA2052",
+                                     "Histoplasma_capsulatum_HISSP-FGPERS2034",
+                                     "Histoplasma_capsulatum_HISSP-FGMAR2044",
+                                     "Histoplasma_capsulatum_HISSP-FGLIN2055",
+                                     "Histoplasma_capsulatum_HISSP-FGJOS2044",
+                                     "Histoplasma_capsulatum_HISSP-FGFIN2028",
+                                     "Histoplasma_capsulatum_HISSP-FGFER2036",
+                                     "Histoplasma_capsulatum_HISSP-FGFAR0189",
+                                     "Histoplasma_capsulatum_HISSP-FGFAN2059",
+                                     "Histoplasma_capsulatum_HISSP-FGBON2001",
+                                     "Histoplasma_capsulatum_HISSP-FGBIK2051",
+                                     "Histoplasma_capsulatum_HISSP-FGAMA2041",
+                                     "Histoplasma_capsulatum_HISSP-CM6408",
+                                     "Histoplasma_capsulatum_HISSP-CM6015",
+                                     "Histoplasma_capsulatum_HISSP-B05821",
+                                     "Histoplasma_capsulatum_HISSP-11571-Belem1",
+                                     "Histoplasma_capsulatum_HISSP-1014-Belem3",
+                                     "Histoplasma_capsulatum_07_12-RJ",
+                                     "Histoplasma_capsulatum_104_p_06",
+                                     "Histoplasma_capsulatum_117_p_12",
+                                     "Histoplasma_capsulatum_122_p_10_B",
+                                     "Histoplasma_capsulatum_136_P_07",
+                                     "Histoplasma_capsulatum_144_p_08",
+                                     "Histoplasma_capsulatum_1517_p_17",
+                                     "Histoplasma_capsulatum_256_P_18",
+                                     "Histoplasma_capsulatum_316_p_10",
+                                     "Histoplasma_capsulatum_327_P_12",
+                                     "Histoplasma_capsulatum_343_p_18",
+                                     "Histoplasma_capsulatum_388_p_11",
+                                     "Histoplasma_capsulatum_ES2_83Z",
+                                     "Histoplasma_capsulatum_ES2_85Z",
+                                     "Histoplasma_capsulatum_ES2_86Z",
+                                     "Histoplasma_capsulatum_ES2_88Z",
+                                     "Histoplasma_capsulatum_ES2_89Z",
+                                     "Histoplasma_capsulatum_ES2_90Z",
+                                     "Histoplasma_capsulatum_SA15",
+                                     "Histoplasma_capsulatum_CB053",
+                                     "Histoplasma_capsulatum_CB055",
+                                     "Histoplasma_capsulatum_CB062",
+                                     "Histoplasma_capsulatum_CB063",
+                                     "Histoplasma_capsulatum_CB064",
+                                     "Histoplasma_capsulatum_CB065",
+                                     "Histoplasma_capsulatum_CB066",
+                                     "Histoplasma_capsulatum_CB168",
+                                     "Histoplasma_capsulatum_CB174",
+                                     "Histoplasma_capsulatum_CB180",
+                                     "Histoplasma_capsulatum_CB186",
+                                     "Histoplasma_capsulatum_CB192",
+                                     "Histoplasma_capsulatum_Dr_Anuradha_Fungal_WGS_S11",
+                                     "Histoplasma_capsulatum_Dr_Anuradha_Fungal_WGS_S14",
+                                     "Histoplasma_capsulatum_Dr_Anuradha_Fungal_WGS_S16",
+                                     "Histoplasma_mississippiense_WU24",
+                                     "Histoplasma_ohiense_G217B",
+                                     "Histoplasma_capsulatum_G184AR",
+                                     "Histoplasma_capsulatum_G186AR",
+                                     "Histoplasma_capsulatum_H88"))
+
+
+
+library("ggplot2")
+
+
+#Saving results to a PDF file
+pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/PLOTS/Starship_genome.pdf', width=8, height=8)
+
+ggplot(Star_melt, (aes(x=variable, y=value, fill=class))) + geom_bar(position="stack", stat="identity") + coord_flip() + 
+  labs(title = "Histoplasma Isolates TE", y = "Percentage of Starship per Genome", x = "Histoplasma Isolates") +
+  theme(legend.position = 'bottom') + scale_fill_brewer(palette = "Paired")
+
+dev.off()
+
 
 #RE-RUN significance tests on tree_AAB
 
@@ -3047,4 +3184,28 @@ sig.k.SR
 plot.phylosig(sig.k.SR)
 
 #Phylogenetic signal K : 1.18526 
+#P-value (based on 1000 randomizations) : 0.001 
+
+## Starships
+row_Star = which(Percentage_B$class=="Starship")
+data.vec_Star = as.numeric(Percentage_B[row_Star, ]); names(data.vec_Star) = colnames(Percentage_B)
+
+# remove the first column, which contains no data
+data.vec_Star=data.vec_Star[-1]
+
+# we'll use the test=TRUE argument so that it will tell us whether the signal is 'significant'
+sig.lam.Star = phylosig(tree=tree_AAB, x=data.vec_Star, method="lambda", test=TRUE)
+sig.lam.Star
+plot.phylosig(sig.lam.Star)
+
+#Phylogenetic signal lambda : 0.911629 
+#logL(lambda) : 321.212 
+#LR(lambda=0) : 112.234 
+#P-value (based on LR test) : 3.17469e-26  
+
+sig.k.Star = (phylosig(tree=tree_AAB, x=data.vec_Star, method="K", test=TRUE))
+sig.k.Star
+plot.phylosig(sig.k.Star)
+
+#Phylogenetic signal K : 1.49134 
 #P-value (based on 1000 randomizations) : 0.001 
