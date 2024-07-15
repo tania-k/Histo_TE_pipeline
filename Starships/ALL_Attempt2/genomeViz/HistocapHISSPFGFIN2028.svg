@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="3600px" height="3600px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="bg">
+<rect x="0" y="0" width="3600px" height="3600px" style="fill:rgb(255,255,255);"/>
+</g>
+<g id="ideograms">
+<path d="M1800.000,1020.000 A780.000,780.000 40.000 0,1 2290.793,2406.236 L2479.560,2639.404 A1080.000,1080.000 0.000 0,0 1800.000,720.000 Z" style="stroke-width:1.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:rgb(179,177,178);" />
+<text x="2234.9" y="1663.0" font-size="33.8px" font-family="CMUBright-Roman" style="text-anchor:start;fill:rgb(0,0,0);" transform="rotate(340.5,2234.9,1663.0)" >HistocapHISSPFGFIN2028<tspan baseline-shift="-40%" font-size="90%">3</tspan>4</text>
+<g id="highlighttrack_0">
+<path d="M2576.683,1728.142 A780.000,780.000 40.000 0,1 2570.179,1923.389 L2866.401,1970.846 A1080.000,1080.000 0.000 0,0 2875.407,1700.504 Z" style="stroke-width:6.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:rgb(255,38,78);" />
+</g>
+<path d="M1800.000,1020.000 A780.000,780.000 40.000 0,1 2290.793,2406.236 L2479.560,2639.404 A1080.000,1080.000 0.000 0,0 1800.000,720.000 Z" style="stroke-width:1.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:none;" />
+</g>
+<g id="plot0">
+<g id="plot0-axis">
+</g>
+<line x1='2889.4' y1='1836.3' x2='3089.3' y2='1842.9' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<line x1='3089.3' y1='1842.9' x2='3097.3' y2='1843.2' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<line x1='3097.3' y1='1843.2' x2='3101.3' y2='1843.3' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<text x="3109.8" y="1857.1" font-size="28.6px" font-family="CMUBright-Roman" style="text-anchor:start;fill:rgb(255,38,78);" transform="rotate(1.9,3109.8,1857.1)" >HistocapHISSPFGFIN2028<tspan baseline-shift="-40%" font-size="90%">s</tspan>00986</text>
+</g>
+<defs>
+<pattern id="hline-sparse" width="10" height="10" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" style="stroke:black;stroke-width:2" /></pattern>
+<pattern id="hline" width="10" height="10" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" style="stroke:black;stroke-width:5" /></pattern>
+<pattern id="checker" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" style="stroke:black;stroke-width:5" /><line x1="0" y1="0" x2="0" y2="10" style="stroke:black;stroke-width:4" /></pattern>
+<pattern id="vline" width="10" height="10" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" style="stroke:black;stroke-width:5" /></pattern>
+<pattern id="checker" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" style="stroke:black;stroke-width:2" /><line x1="0" y1="0" x2="0" y2="10" style="stroke:black;stroke-width:2" /></pattern>
+<pattern id="vline-sparse" width="10" height="10" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" style="stroke:black;stroke-width:2" /></pattern>
+</defs>
+</svg>

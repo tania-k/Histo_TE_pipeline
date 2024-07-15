@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="3600px" height="3600px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="bg">
+<rect x="0" y="0" width="3600px" height="3600px" style="fill:rgb(255,255,255);"/>
+</g>
+<g id="ideograms">
+<path d="M1800.000,1020.000 A780.000,780.000 40.000 1,1 1318.934,2413.984 L1133.909,2650.131 A1080.000,1080.000 0.000 1,0 1800.000,720.000 Z" style="stroke-width:1.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:rgb(179,177,178);" />
+<text x="2225.6" y="1963.8" font-size="33.8px" font-family="CMUBright-Roman" style="text-anchor:start;fill:rgb(0,0,0);" transform="rotate(19.0,2225.6,1963.8)" >HistocapHISSP11571<tspan baseline-shift="-40%" font-size="90%">2</tspan></text>
+<line x1='2032.6' y1='745.3' x2='2034.7' y2='735.6' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2254.2' y1='820.2' x2='2258.4' y2='811.1' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2454.6' y1='941.0' x2='2460.6' y2='933.0' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2624.2' y1='1102.1' x2='2631.8' y2='1095.6' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<text x="2642.8" y="1096.2" font-size="23.4px" font-family="CMUBright-Roman" style="text-anchor:start;fill:rgb(150,150,150);" transform="rotate(319.7,2642.8,1096.2)" >1 mb</text>
+<line x1='2755.1' y1='1295.9' x2='2764.0' y2='1291.3' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2841.3' y1='1513.4' x2='2850.9' y2='1510.8' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2878.6' y1='1744.4' x2='2888.6' y2='1743.9' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2865.2' y1='1977.9' x2='2875.1' y2='1979.6' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<text x="2881.7" y="1988.3" font-size="23.4px" font-family="CMUBright-Roman" style="text-anchor:start;fill:rgb(150,150,150);" transform="rotate(9.5,2881.7,1988.3)" >2 mb</text>
+<line x1='2801.9' y1='2203.2' x2='2811.2' y2='2206.9' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2691.6' y1='2409.4' x2='2699.9' y2='2415.1' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2539.5' y1='2587.2' x2='2546.3' y2='2594.4' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='2352.6' y1='2727.9' x2='2357.7' y2='2736.5' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<text x="2355.4" y="2747.2" font-size="23.4px" font-family="CMUBright-Roman" style="text-anchor:start;fill:rgb(150,150,150);" transform="rotate(59.2,2355.4,2747.2)" >3 mb</text>
+<line x1='2139.8' y1='2825.1' x2='2143.0' y2='2834.6' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='1911.1' y1='2874.3' x2='1912.1' y2='2884.2' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='1677.2' y1='2873.0' x2='1676.0' y2='2882.9' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='1449.0' y1='2821.4' x2='1445.7' y2='2830.8' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<text x="1450.2" y="2840.8" font-size="23.4px" font-family="CMUBright-Roman" style="text-anchor:end;fill:rgb(150,150,150);" transform="rotate(-71.0,1450.2,2840.8)" >4 mb</text>
+<line x1='1237.3' y1='2721.8' x2='1232.1' y2='2730.4' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<g id="highlighttrack_0">
+<path d="M2047.901,1060.443 A780.000,780.000 40.000 0,1 2056.276,1063.303 L2154.843,779.958 A1080.000,1080.000 0.000 0,0 2143.248,775.998 Z" style="stroke-width:6.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:rgb(255,38,78);" />
+</g>
+<path d="M1800.000,1020.000 A780.000,780.000 40.000 1,1 1318.934,2413.984 L1133.909,2650.131 A1080.000,1080.000 0.000 1,0 1800.000,720.000 Z" style="stroke-width:1.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:none;" />
+<path d="M1220.096,2321.643 A780.000,780.000 40.000 0,1 1665.247,1031.728 L1613.419,736.239 A1080.000,1080.000 0.000 0,0 997.056,2522.275 Z" style="stroke-width:1.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:rgb(179,177,178);" />
+<text x="1364.0" y="1666.5" font-size="33.8px" font-family="CMUBright-Roman" style="text-anchor:end;fill:rgb(0,0,0);" transform="rotate(19.0,1364.0,1666.5)" >HistocapHISSP11571<tspan baseline-shift="-40%" font-size="90%">4</tspan></text>
+<line x1='860.4' y1='2332.4' x2='851.7' y2='2337.4' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='767.8' y1='2117.6' x2='758.2' y2='2120.5' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='723.6' y1='1887.9' x2='713.6' y2='1888.7' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='729.9' y1='1654.0' x2='720.0' y2='1652.7' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<text x="711.1" y="1659.0" font-size="23.4px" font-family="CMUBright-Roman" style="text-anchor:end;fill:rgb(150,150,150);" transform="rotate(7.8,711.1,1659.0)" >1 mb</text>
+<line x1='786.5' y1='1427.0' x2='777.1' y2='1423.5' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='890.6' y1='1217.5' x2='882.1' y2='1212.1' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='1037.3' y1='1035.3' x2='1030.3' y2='1028.2' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<line x1='1219.9' y1='889.0' x2='1214.5' y2='880.6' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<text x="1203.9" y="877.9" font-size="23.4px" font-family="CMUBright-Roman" style="text-anchor:end;fill:rgb(150,150,150);" transform="rotate(57.5,1203.9,877.9)" >2 mb</text>
+<line x1='1429.7' y1='785.5' x2='1426.2' y2='776.1' style="stroke-width:6.0;stroke:rgb(150,150,150);stroke-linecap:round;fill:none;" />
+<g id="highlighttrack_0">
+<path d="M1146.296,2225.524 A780.000,780.000 40.000 0,1 1145.271,2223.946 L893.453,2387.002 A1080.000,1080.000 0.000 0,0 894.871,2389.187 Z" style="stroke-width:6.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:rgb(255,38,78);" />
+<path d="M1051.374,2018.996 A780.000,780.000 40.000 0,1 1045.751,1998.766 L755.655,2075.214 A1080.000,1080.000 0.000 0,0 763.441,2103.226 Z" style="stroke-width:6.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:rgb(255,38,78);" />
+</g>
+<path d="M1220.096,2321.643 A780.000,780.000 40.000 0,1 1665.247,1031.728 L1613.419,736.239 A1080.000,1080.000 0.000 0,0 997.056,2522.275 Z" style="stroke-width:1.0;stroke:rgb(0,0,0);stroke-linecap:round;fill:none;" />
+</g>
+<g id="plot0">
+<g id="plot0-axis">
+</g>
+<line x1='2152.3' y1='768.5' x2='2216.9' y2='579.2' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<line x1='2216.9' y1='579.2' x2='2219.5' y2='571.7' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<line x1='2219.5' y1='571.7' x2='2220.8' y2='567.9' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<text x="2236.5" y="563.8" font-size="28.6px" font-family="CMUBright-Roman" style="text-anchor:start;fill:rgb(255,38,78);" transform="rotate(288.9,2236.5,563.8)" >HistocapHISSP11571<tspan baseline-shift="-40%" font-size="90%">s</tspan>01060</text>
+<line x1='885.8' y1='2393.5' x2='718.0' y2='2502.4' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<line x1='718.0' y1='2502.4' x2='711.3' y2='2506.8' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<line x1='711.3' y1='2506.8' x2='708.0' y2='2509.0' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<text x="707.8" y="2525.2" font-size="28.6px" font-family="CMUBright-Roman" style="text-anchor:end;fill:rgb(255,38,78);" transform="rotate(-33.0,707.8,2525.2)" >HistocapHISSP11571<tspan baseline-shift="-40%" font-size="90%">s</tspan>01061</text>
+<line x1='749.8' y1='2091.9' x2='557.1' y2='2145.5' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<line x1='557.1' y1='2145.5' x2='549.4' y2='2147.6' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<line x1='549.4' y1='2147.6' x2='545.6' y2='2148.7' style="stroke-width:2.0;stroke:rgb(255,38,78);stroke-linecap:round;fill:none;" />
+<text x="540.6" y="2164.1" font-size="28.6px" font-family="CMUBright-Roman" style="text-anchor:end;fill:rgb(255,38,78);" transform="rotate(-15.5,540.6,2164.1)" >HistocapHISSP11571<tspan baseline-shift="-40%" font-size="90%">s</tspan>01062</text>
+</g>
+<defs>
+<pattern id="hline" width="10" height="10" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" style="stroke:black;stroke-width:5" /></pattern>
+<pattern id="vline" width="10" height="10" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" style="stroke:black;stroke-width:5" /></pattern>
+<pattern id="checker" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" style="stroke:black;stroke-width:2" /><line x1="0" y1="0" x2="0" y2="10" style="stroke:black;stroke-width:2" /></pattern>
+<pattern id="hline-sparse" width="10" height="10" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" style="stroke:black;stroke-width:2" /></pattern>
+<pattern id="vline-sparse" width="10" height="10" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" style="stroke:black;stroke-width:2" /></pattern>
+<pattern id="checker" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" style="stroke:black;stroke-width:5" /><line x1="0" y1="0" x2="0" y2="10" style="stroke:black;stroke-width:4" /></pattern>
+</defs>
+</svg>
