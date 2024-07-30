@@ -59,7 +59,7 @@ Histoplasma_capsulatum_var.duboisii_H88class <- Histoplasma_capsulatum_var.duboi
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/37996987)
-write_tsv(Histoplasma_capsulatum_var.duboisii_H88class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/Histoplasma_capsulatum_var.duboisii_H88class.tsv")
+write_tsv(Histoplasma_capsulatum_var.duboisii_H88class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_cap/Histoplasma_capsulatum_var.duboisii_H88class.tsv")
 Histoplasma_capsulatum_var.duboisii_H88class <- Histoplasma_capsulatum_var.duboisii_H88class %>% mutate('Histoplasma capsulatum var.duboisii H88'= percentage)
 Histoplasma_capsulatum_var.duboisii_H88class1 <- Histoplasma_capsulatum_var.duboisii_H88class %>% select(-c(n,total,percentage))
 
@@ -2690,7 +2690,7 @@ PERC_SUM_melt_B<- melt(Percentage_B, id.vars="class",
                                         "Histoplasma capsulatum 19VMG15","Histoplasma suramericanum SECH_105_21_14"))
 
 
-pdf(file='/nas/longleaf/home/taniak/taniak/TE_Analysis/Stacked_barplot_Blast_Star.pdf', width=15, height=20)
+pdf(file='//nas/longleaf/home/taniak/taniak/TE_Analysis/Starships/ALL_Attempt2/new_RM/Stacked_barplot_Blast_Star.pdf', width=15, height=20)
 
 ggplot(PERC_SUM_melt_B, (aes(x=variable, y=value, fill=class))) + geom_bar(position="stack", stat="identity") + coord_flip() + 
   labs(title = "Histoplasma Isolates TE", y = "Percentage of TE per Genome", x = "Histoplasma Isolates") +
@@ -2793,7 +2793,7 @@ d$Species[grep("JB_062775-Hc_062775", d$new_seq3)] = "Histoplasma capsulatum JB_
 d$Species[grep("JB_083285_2-Hc_083285_2", d$new_seq3)] = "Histoplasma capsulatum JB_083285_2-Hc_083285_2"
 d$Species[grep("CB053-2", d$new_seq3)] = "Histoplasma capsulatum CB053" 
 d$Species[grep("CB055-2", d$new_seq3)] = "Histoplasma capsulatum CB055"
-d$Species[grep("SECH_101", d$new_seq3)] = "Histoplasma capsulatum senso_stricto SECH_101_H184AR"
+d$Species[grep("SECH_101", d$new_seq3)] = "Histoplasma capsulatum senso_stricto SECH_101_G184AR"
 d$Species[grep("HISSP-CM6408", d$new_seq3)] = "Histoplasma capsulatum HISSP-CM6408"
 d$Species[grep("HISSP-1014-Belem3", d$new_seq3)] = "Histoplasma capsulatum HISSP-1014-Belem3"
 d$Species[grep("ES2_83Z", d$new_seq3)] = "Histoplasma capsulatum ES2_83Z"
