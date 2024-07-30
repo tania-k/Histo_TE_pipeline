@@ -28,7 +28,7 @@ Histoplasma_capsulatum_WU24class <- Histoplasma_capsulatum_WU24 %>% group_by(cla
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/32531515)
-write_tsv(Histoplasma_capsulatum_WU24class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/Histoplasma_capsulatum_WU24class.tsv")
+write_tsv(Histoplasma_capsulatum_WU24class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_cap/Histoplasma_capsulatum_WU24class.tsv")
 Histoplasma_capsulatum_WU24class <- Histoplasma_capsulatum_WU24class %>% mutate('Histoplasma capsulatum WU24'= percentage)
 
 #Histoplasma_capsulatum_WU24class_N <- Histoplasma_capsulatum_WU24class %>% select(-c(n,total,percentage))
@@ -44,7 +44,7 @@ Histoplasma_ohiense_G217Bclass <- Histoplasma_ohiense_G217B %>% group_by(class) 
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/39447273)
-write_tsv(Histoplasma_ohiense_G217Bclass,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/Histoplasma_ohiense_G217Bclass.tsv")
+write_tsv(Histoplasma_ohiense_G217Bclass,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_G217Bclass.tsv")
 Histoplasma_ohiense_G217Bclass <- Histoplasma_ohiense_G217Bclass %>% mutate('Histoplasma ohiense G217B'= percentage)
 #Histoplasma_capsulatum_WU24class_N <- Histoplasma_capsulatum_WU24class %>% select(-c(n,total,percentage))
 Histoplasma_ohiense_G217Bclass1 <- Histoplasma_ohiense_G217Bclass %>% select(-c(n,total,percentage))
@@ -73,7 +73,7 @@ Histoplasma_capsulatum_G186ARclass <- Histoplasma_capsulatum_G186AR %>% group_by
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/31111494)
-write_tsv(Histoplasma_capsulatum_G186ARclass,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/Histoplasma_capsulatum_G186ARclass.tsv")
+write_tsv(Histoplasma_capsulatum_G186ARclass,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_cap/Histoplasma_capsulatum_G186ARclass.tsv")
 Histoplasma_capsulatum_G186ARclass <- Histoplasma_capsulatum_G186ARclass %>% mutate('Histoplasma capsulatum G186AR'= percentage)
 Histoplasma_capsulatum_G186ARclass1 <- Histoplasma_capsulatum_G186ARclass %>% select(-c(n,total,percentage))
 
@@ -95,15 +95,13 @@ Histoplasma_capsulatum_G184ARclass1 <- Histoplasma_capsulatum_G184ARclass %>% se
 Histoplasma_ohiense_HCCI_17 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_HCCI_17.RM/Histoplasma_ohiense_HCCI_17.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_HCCI_17) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_HCCI_17 <- Histoplasma_ohiense_HCCI_17 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_HCCI_171 <- subset(Histoplasma_ohiense_HCCI_17,class != "Low_complexity")
-#Histoplasma_ohiense_HCCI_172 <- subset(Histoplasma_ohiense_HCCI_171,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_HCCI_17,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_HCCI_17_version2.tsv")
+write_tsv(Histoplasma_ohiense_HCCI_17,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_HCCI_17_version2.tsv")
 
 Histoplasma_ohiense_HCCI_17class<- Histoplasma_ohiense_HCCI_17 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/34006939)
-write_tsv(Histoplasma_ohiense_HCCI_17class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_HCCI_17class_version2.tsv")
+write_tsv(Histoplasma_ohiense_HCCI_17class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_HCCI_17class_version2.tsv")
 Histoplasma_ohiense_HCCI_17class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_HCCI_17class_version2.tsv")
 Histoplasma_ohiense_HCCI_17class <- Histoplasma_ohiense_HCCI_17class %>% mutate('Histoplasma ohiense HCCI_17'= percentage)
 Histoplasma_ohiense_HCCI_17class_N <- Histoplasma_ohiense_HCCI_17class %>% select(-c(n,total,percentage))
@@ -113,15 +111,13 @@ Histoplasma_ohiense_HCCI_17class1 <- Histoplasma_ohiense_HCCI_17class %>% select
 Histoplasma_ohiense_HCCI_6 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_HCCI_6.RM/Histoplasma_ohiense_HCCI_6.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_HCCI_6) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_HCCI_6 <- Histoplasma_ohiense_HCCI_6 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_HCCI_61 <- subset(Histoplasma_ohiense_HCCI_6,class != "Low_complexity")
-#Histoplasma_ohiense_HCCI_62 <- subset(Histoplasma_ohiense_HCCI_61,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_HCCI_6,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_HCCI_6.tsv")
+write_tsv(Histoplasma_ohiense_HCCI_6,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_HCCI_6.tsv")
 
 Histoplasma_ohiense_HCCI_6class<- Histoplasma_ohiense_HCCI_62 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/28445673)
-write_tsv(Histoplasma_ohiense_HCCI_6class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_HCCI_6class.tsv")
+write_tsv(Histoplasma_ohiense_HCCI_6class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_HCCI_6class.tsv")
 Histoplasma_ohiense_HCCI_6class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_HCCI_6class.tsv")
 Histoplasma_ohiense_HCCI_6class <- Histoplasma_ohiense_HCCI_6class %>% mutate('Histoplasma ohiense HCCI_6'= percentage)
 Histoplasma_ohiense_HCCI_6class1 <- Histoplasma_ohiense_HCCI_6class %>% select(-c(n,total,percentage))
@@ -130,9 +126,7 @@ Histoplasma_ohiense_HCCI_6class1 <- Histoplasma_ohiense_HCCI_6class %>% select(-
 Histoplasma_ohiense_HCG217B <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_HCG217B.RM/Histoplasma_ohiense_HCG217B.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_HCG217B) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_HCG217B <- Histoplasma_ohiense_HCG217B %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_HCG217B1 <- subset(Histoplasma_ohiense_HCG217B,class != "Low_complexity")
-#Histoplasma_ohiense_HCG217B2 <- subset(Histoplasma_ohiense_HCG217B1,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_HCG217B,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_HCG217B.tsv")
+write_tsv(Histoplasma_ohiense_HCG217B,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_HCG217B.tsv")
 
 Histoplasma_ohiense_HCG217Bclass<- Histoplasma_ohiense_HCG217B2 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
@@ -148,15 +142,13 @@ Histoplasma_ohiense_HCG217Bclass_N <- Histoplasma_ohiense_HCG217Bclass %>% selec
 Histoplasma_ohiense_SECH_82.Nam1_CI_4 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_82-Nam1_CI_4.RM/Histoplasma_ohiense_SECH_82-Nam1_CI_4.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_82.Nam1_CI_4) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_82.Nam1_CI_4 <- Histoplasma_ohiense_SECH_82.Nam1_CI_4 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_82.Nam1_CI_41 <- subset(Histoplasma_ohiense_SECH_82.Nam1_CI_4,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_82.Nam1_CI_42 <- subset(Histoplasma_ohiense_SECH_82.Nam1_CI_41,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_82.Nam1_CI_4,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_82-Nam1_CI_4.tsv")
+write_tsv(Histoplasma_ohiense_SECH_82.Nam1_CI_4,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_82-Nam1_CI_4.tsv")
 
 Histoplasma_ohiense_SECH_82.Nam1_CI_4class<- Histoplasma_ohiense_SECH_82.Nam1_CI_42 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/30880349)
-write_tsv(Histoplasma_ohiense_SECH_82.Nam1_CI_4class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_82-Nam1_CI_4class.tsv")
+write_tsv(Histoplasma_ohiense_SECH_82.Nam1_CI_4class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_82-Nam1_CI_4class.tsv")
 Histoplasma_ohiense_SECH_82.Nam1_CI_4class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_82-Nam1_CI_4class.tsv")
 Histoplasma_ohiense_SECH_82.Nam1_CI_4class <- Histoplasma_ohiense_SECH_82.Nam1_CI_4class %>% mutate('Histoplasma ohiense SECH_82-Nam1_CI_4'= percentage)
 Histoplasma_ohiense_SECH_82.Nam1_CI_4class1 <- Histoplasma_ohiense_SECH_82.Nam1_CI_4class %>% select(-c(n,total,percentage))
@@ -166,15 +158,13 @@ Histoplasma_ohiense_SECH_82.Nam1_CI_4class_N <- Histoplasma_ohiense_SECH_82.Nam1
 Histoplasma_ohiense_SECH_91.Nam2_G217B <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_91-Nam2_G217B.RM/Histoplasma_ohiense_SECH_91-Nam2_G217B.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_91.Nam2_G217B) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_91.Nam2_G217B <- Histoplasma_ohiense_SECH_91.Nam2_G217B %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_91.Nam2_G217B1 <- subset(Histoplasma_ohiense_SECH_91.Nam2_G217B,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_91.Nam2_G217B2 <- subset(Histoplasma_ohiense_SECH_91.Nam2_G217B1,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_91.Nam2_G217B,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_91-Nam2_G217B.tsv")
+write_tsv(Histoplasma_ohiense_SECH_91.Nam2_G217B,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_91-Nam2_G217B.tsv")
 
 Histoplasma_ohiense_SECH_91.Nam2_G217Bclass<- Histoplasma_ohiense_SECH_91.Nam2_G217B2 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/29816969)
-write_tsv(Histoplasma_ohiense_SECH_91.Nam2_G217Bclass,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_91-Nam2_G217Bclass.tsv")
+write_tsv(Histoplasma_ohiense_SECH_91.Nam2_G217Bclass,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_91-Nam2_G217Bclass.tsv")
 Histoplasma_ohiense_SECH_91.Nam2_G217Bclass <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_91-Nam2_G217Bclass.tsv")
 Histoplasma_ohiense_SECH_91.Nam2_G217Bclass <- Histoplasma_ohiense_SECH_91.Nam2_G217Bclass %>% mutate('Histoplasma ohiense SECH_91-Nam2_G217B'= percentage)
 Histoplasma_ohiense_SECH_91.Nam2_G217Bclass1 <- Histoplasma_ohiense_SECH_91.Nam2_G217Bclass %>% select(-c(n,total,percentage))
@@ -185,15 +175,13 @@ Histoplasma_ohiense_SECH_92.Nam2_G222B <- read_table("/nas/longleaf/home/taniak/
 
 colnames(Histoplasma_ohiense_SECH_92.Nam2_G222B) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_92.Nam2_G222B <- Histoplasma_ohiense_SECH_92.Nam2_G222B %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_92.Nam2_G222B1 <- subset(Histoplasma_ohiense_SECH_92.Nam2_G222B,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_92.Nam2_G222B2 <- subset(Histoplasma_ohiense_SECH_92.Nam2_G222B1,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_92.Nam2_G222B,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_92-Nam2_G222B.tsv")
+write_tsv(Histoplasma_ohiense_SECH_92.Nam2_G222B,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_92-Nam2_G222B.tsv")
 
 Histoplasma_ohiense_SECH_92.Nam2_G222Bclass<- Histoplasma_ohiense_SECH_92.Nam2_G222B2 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/29639711)
-write_tsv(Histoplasma_ohiense_SECH_92.Nam2_G222Bclass,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_92-Nam2_G222Bclass.tsv")
+write_tsv(Histoplasma_ohiense_SECH_92.Nam2_G222Bclass,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_92-Nam2_G222Bclass.tsv")
 Histoplasma_ohiense_SECH_92.Nam2_G222Bclass <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_92-Nam2_G222Bclass.tsv")
 Histoplasma_ohiense_SECH_92.Nam2_G222Bclass <- Histoplasma_ohiense_SECH_92.Nam2_G222Bclass %>% mutate('Histoplasma ohiense SECH_92-Nam2_G222B'= percentage)
 Histoplasma_ohiense_SECH_92.Nam2_G222Bclass1 <- Histoplasma_ohiense_SECH_92.Nam2_G222Bclass %>% select(-c(n,total,percentage))
@@ -203,15 +191,13 @@ Histoplasma_ohiense_SECH_92.Nam2_G222Bclass_N <- Histoplasma_ohiense_SECH_92.Nam
 Histoplasma_ohiense_SECH_93.Nam2_CI_6 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_93-Nam2_CI_6.RM/Histoplasma_ohiense_SECH_93-Nam2_CI_6.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_93.Nam2_CI_6) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_93.Nam2_CI_6 <- Histoplasma_ohiense_SECH_93.Nam2_CI_6 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_93.Nam2_CI_61 <- subset(Histoplasma_ohiense_SECH_93.Nam2_CI_6,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_93.Nam2_CI_62 <- subset(Histoplasma_ohiense_SECH_93.Nam2_CI_61,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_93.Nam2_CI_6,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_93-Nam2_CI_6.tsv")
+write_tsv(Histoplasma_ohiense_SECH_93.Nam2_CI_6,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_93-Nam2_CI_6.tsv")
 
 Histoplasma_ohiense_SECH_93.Nam2_CI_6class<- Histoplasma_ohiense_SECH_93.Nam2_CI_62 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/23646057)
-write_tsv(Histoplasma_ohiense_SECH_93.Nam2_CI_6class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_93-Nam2_CI_6class.tsv")
+write_tsv(Histoplasma_ohiense_SECH_93.Nam2_CI_6class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_93-Nam2_CI_6class.tsv")
 Histoplasma_ohiense_SECH_93.Nam2_CI_6class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_93-Nam2_CI_6class.tsv")
 Histoplasma_ohiense_SECH_93.Nam2_CI_6class <- Histoplasma_ohiense_SECH_93.Nam2_CI_6class %>% mutate('Histoplasma ohiense SECH_93.Nam2_CI_6'= percentage)
 Histoplasma_ohiense_SECH_93.Nam2_CI_6class1 <- Histoplasma_ohiense_SECH_93.Nam2_CI_6class %>% select(-c(n,total,percentage))
@@ -221,15 +207,13 @@ Histoplasma_ohiense_SECH_93.Nam2_CI_6class_N <- Histoplasma_ohiense_SECH_93.Nam2
 Histoplasma_ohiense_SECH_94.Nam2_CI_9 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_94-Nam2_CI_9.RM/Histoplasma_ohiense_SECH_94-Nam2_CI_9.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_94.Nam2_CI_9) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_94.Nam2_CI_9 <- Histoplasma_ohiense_SECH_94.Nam2_CI_9 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_94.Nam2_CI_91 <- subset(Histoplasma_ohiense_SECH_94.Nam2_CI_9,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_94.Nam2_CI_92 <- subset(Histoplasma_ohiense_SECH_94.Nam2_CI_91,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_94.Nam2_CI_9,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_94.Nam2_CI_9.tsv")
+write_tsv(Histoplasma_ohiense_SECH_94.Nam2_CI_9,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_94.Nam2_CI_9.tsv")
 
 Histoplasma_ohiense_SECH_94.Nam2_CI_9class<- Histoplasma_ohiense_SECH_94.Nam2_CI_92 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/20233006)
-write_tsv(Histoplasma_ohiense_SECH_94.Nam2_CI_9class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_94.Nam2_CI_9class.tsv")
+write_tsv(Histoplasma_ohiense_SECH_94.Nam2_CI_9class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_94.Nam2_CI_9class.tsv")
 Histoplasma_ohiense_SECH_94.Nam2_CI_9class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_94.Nam2_CI_9class.tsv")
 Histoplasma_ohiense_SECH_94.Nam2_CI_9class <- Histoplasma_ohiense_SECH_94.Nam2_CI_9class %>% mutate('Histoplasma ohiense SECH_94-Nam2_CI_9'= percentage)
 Histoplasma_ohiense_SECH_94.Nam2_CI_9class1 <- Histoplasma_ohiense_SECH_94.Nam2_CI_9class %>% select(-c(n,total,percentage))
@@ -239,15 +223,13 @@ Histoplasma_ohiense_SECH_94.Nam2_CI_9class_N <- Histoplasma_ohiense_SECH_94.Nam2
 Histoplasma_ohiense_SECH_95.Nam2_CI_10 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_95-Nam2_CI_10.RM/Histoplasma_ohiense_SECH_95-Nam2_CI_10.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_95.Nam2_CI_10) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_95.Nam2_CI_10 <- Histoplasma_ohiense_SECH_95.Nam2_CI_10 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_95.Nam2_CI_101 <- subset(Histoplasma_ohiense_SECH_95.Nam2_CI_10,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_95.Nam2_CI_102 <- subset(Histoplasma_ohiense_SECH_95.Nam2_CI_101,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_95.Nam2_CI_10,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_95.Nam2_CI_10.tsv")
+write_tsv(Histoplasma_ohiense_SECH_95.Nam2_CI_10,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_95.Nam2_CI_10.tsv")
 
 Histoplasma_ohiense_SECH_95.Nam2_CI_10class<- Histoplasma_ohiense_SECH_95.Nam2_CI_102 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/25510614)
-write_tsv(Histoplasma_ohiense_SECH_95.Nam2_CI_10class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_95.Nam2_CI_10class.tsv")
+write_tsv(Histoplasma_ohiense_SECH_95.Nam2_CI_10class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_95.Nam2_CI_10class.tsv")
 Histoplasma_ohiense_SECH_95.Nam2_CI_10class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_95.Nam2_CI_10class.tsv")
 Histoplasma_ohiense_SECH_95.Nam2_CI_10class <- Histoplasma_ohiense_SECH_95.Nam2_CI_10class %>% mutate('Histoplasma ohiense SECH_95.Nam2_CI_10'= percentage)
 Histoplasma_ohiense_SECH_95.Nam2_CI_10class1 <- Histoplasma_ohiense_SECH_95.Nam2_CI_10class %>% select(-c(n,total,percentage))
@@ -257,15 +239,13 @@ Histoplasma_ohiense_SECH_95.Nam2_CI_10class_N <- Histoplasma_ohiense_SECH_95.Nam
 Histoplasma_ohiense_SECH_96.Nam2_CI_17 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_96-Nam2_CI_17.RM/Histoplasma_ohiense_SECH_96-Nam2_CI_17.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_96.Nam2_CI_17) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_96.Nam2_CI_17 <- Histoplasma_ohiense_SECH_96.Nam2_CI_17 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_96.Nam2_CI_171 <- subset(Histoplasma_ohiense_SECH_96.Nam2_CI_17,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_96.Nam2_CI_172 <- subset(Histoplasma_ohiense_SECH_96.Nam2_CI_171,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_96.Nam2_CI_17,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_96.Nam2_CI_17.tsv")
+write_tsv(Histoplasma_ohiense_SECH_96.Nam2_CI_17,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_96.Nam2_CI_17.tsv")
 
 Histoplasma_ohiense_SECH_96.Nam2_CI_17class<- Histoplasma_ohiense_SECH_96.Nam2_CI_172 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/25893578)
-write_tsv(Histoplasma_ohiense_SECH_96.Nam2_CI_17class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_96.Nam2_CI_17class.tsv")
+write_tsv(Histoplasma_ohiense_SECH_96.Nam2_CI_17class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_96.Nam2_CI_17class.tsv")
 Histoplasma_ohiense_SECH_96.Nam2_CI_17class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_96.Nam2_CI_17class.tsv")
 Histoplasma_ohiense_SECH_96.Nam2_CI_17class <- Histoplasma_ohiense_SECH_96.Nam2_CI_17class %>% mutate('Histoplasma ohiense SECH_96.Nam2_CI_17'= percentage)
 Histoplasma_ohiense_SECH_96.Nam2_CI_17class1 <- Histoplasma_ohiense_SECH_96.Nam2_CI_17class %>% select(-c(n,total,percentage))
@@ -275,15 +255,13 @@ Histoplasma_ohiense_SECH_96.Nam2_CI_17class_N <- Histoplasma_ohiense_SECH_96.Nam
 Histoplasma_ohiense_SECH_97.Nam2_CI_18 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_97-Nam2_CI_18.RM/Histoplasma_ohiense_SECH_97-Nam2_CI_18.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_97.Nam2_CI_18) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_97.Nam2_CI_18 <- Histoplasma_ohiense_SECH_97.Nam2_CI_18 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_97.Nam2_CI_181 <- subset(Histoplasma_ohiense_SECH_97.Nam2_CI_18,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_97.Nam2_CI_182 <- subset(Histoplasma_ohiense_SECH_97.Nam2_CI_181,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_97.Nam2_CI_18,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_97-Nam2_CI_18.tsv")
+write_tsv(Histoplasma_ohiense_SECH_97.Nam2_CI_18,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_97-Nam2_CI_18.tsv")
 
 Histoplasma_ohiense_SECH_97.Nam2_CI_18class<- Histoplasma_ohiense_SECH_97.Nam2_CI_182 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/28259788)
-write_tsv(Histoplasma_ohiense_SECH_97.Nam2_CI_18class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_97-Nam2_CI_18class.tsv")
+write_tsv(Histoplasma_ohiense_SECH_97.Nam2_CI_18class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_97-Nam2_CI_18class.tsv")
 Histoplasma_ohiense_SECH_97.Nam2_CI_18class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_97-Nam2_CI_18class.tsv")
 Histoplasma_ohiense_SECH_97.Nam2_CI_18class <- Histoplasma_ohiense_SECH_97.Nam2_CI_18class %>% mutate('Histoplasma ohiense SECH_97-Nam2_CI_18'= percentage)
 Histoplasma_ohiense_SECH_97.Nam2_CI_18class1 <- Histoplasma_ohiense_SECH_97.Nam2_CI_18class %>% select(-c(n,total,percentage))
@@ -293,15 +271,13 @@ Histoplasma_ohiense_SECH_97.Nam2_CI_18class_N <- Histoplasma_ohiense_SECH_97.Nam
 Histoplasma_ohiense_SECH_98.Nam2_CI_30 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_98-Nam2_CI_30.RM/Histoplasma_ohiense_SECH_98-Nam2_CI_30.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_98.Nam2_CI_30) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_98.Nam2_CI_30 <- Histoplasma_ohiense_SECH_98.Nam2_CI_30 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_98.Nam2_CI_301 <- subset(Histoplasma_ohiense_SECH_98.Nam2_CI_30,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_98.Nam2_CI_302 <- subset(Histoplasma_ohiense_SECH_98.Nam2_CI_301,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_98.Nam2_CI_30,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_98.Nam2_CI_30.tsv")
+write_tsv(Histoplasma_ohiense_SECH_98.Nam2_CI_30,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_98.Nam2_CI_30.tsv")
 
 Histoplasma_ohiense_SECH_98.Nam2_CI_30class<- Histoplasma_ohiense_SECH_98.Nam2_CI_302 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/24259982)
-write_tsv(Histoplasma_ohiense_SECH_98.Nam2_CI_30class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_98.Nam2_CI_30class.tsv")
+write_tsv(Histoplasma_ohiense_SECH_98.Nam2_CI_30class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_98.Nam2_CI_30class.tsv")
 Histoplasma_ohiense_SECH_98.Nam2_CI_30class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_98.Nam2_CI_30class.tsv")
 Histoplasma_ohiense_SECH_98.Nam2_CI_30class <- Histoplasma_ohiense_SECH_98.Nam2_CI_30class %>% mutate('Histoplasma ohiense SECH_98.Nam2_CI_30'= percentage)
 Histoplasma_ohiense_SECH_98.Nam2_CI_30class1 <- Histoplasma_ohiense_SECH_98.Nam2_CI_30class %>% select(-c(n,total,percentage))
@@ -311,15 +287,13 @@ Histoplasma_ohiense_SECH_98.Nam2_CI_30class_N <- Histoplasma_ohiense_SECH_98.Nam
 Histoplasma_ohiense_SECH_99.Nam2_CI_35 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiense_SECH_99-Nam2_CI_35.RM/Histoplasma_ohiense_SECH_99-Nam2_CI_35.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiense_SECH_99.Nam2_CI_35) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiense_SECH_99.Nam2_CI_35 <- Histoplasma_ohiense_SECH_99.Nam2_CI_35 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiense_SECH_99.Nam2_CI_351 <- subset(Histoplasma_ohiense_SECH_99.Nam2_CI_35,class != "Low_complexity")
-#Histoplasma_ohiense_SECH_99.Nam2_CI_352 <- subset(Histoplasma_ohiense_SECH_99.Nam2_CI_351,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiense_SECH_99.Nam2_CI_35,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_99.Nam2_CI_35.tsv")
+write_tsv(Histoplasma_ohiense_SECH_99.Nam2_CI_35,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_99.Nam2_CI_35.tsv")
 
 Histoplasma_ohiense_SECH_99.Nam2_CI_35class<- Histoplasma_ohiense_SECH_99.Nam2_CI_352 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/29591009)
-write_tsv(Histoplasma_ohiense_SECH_99.Nam2_CI_35class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiense_SECH_99.Nam2_CI_35class.tsv")
+write_tsv(Histoplasma_ohiense_SECH_99.Nam2_CI_35class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_99.Nam2_CI_35class.tsv")
 Histoplasma_ohiense_SECH_99.Nam2_CI_35class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiense_SECH_99.Nam2_CI_35class.tsv")
 Histoplasma_ohiense_SECH_99.Nam2_CI_35class <- Histoplasma_ohiense_SECH_99.Nam2_CI_35class %>% mutate('Histoplasma ohiense SECH_99.Nam2_CI_35'= percentage)
 Histoplasma_ohiense_SECH_99.Nam2_CI_35class1 <- Histoplasma_ohiense_SECH_99.Nam2_CI_35class %>% select(-c(n,total,percentage))
@@ -329,15 +303,13 @@ Histoplasma_ohiense_SECH_99.Nam2_CI_35class_N <- Histoplasma_ohiense_SECH_99.Nam
 Histoplasma_ohiensis_Hc1986 <- read_table("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_EDTA/Histoplasma_ohiensis_Hc1986.RM/Histoplasma_ohiensis_Hc1986.scaffolds.fa.out",skip=3,col_names = F)
 colnames(Histoplasma_ohiensis_Hc1986) <-c("score","div.","del.","ins.","query","beginq","endq","leftq","strand","family","class","beginr","endr","leftr","ID","overlap")
 Histoplasma_ohiensis_Hc1986 <- Histoplasma_ohiensis_Hc1986 %>% mutate(length=endq-beginq +1) 
-#Histoplasma_ohiensis_Hc19861 <- subset(Histoplasma_ohiensis_Hc1986,class != "Low_complexity")
-#Histoplasma_ohiensis_Hc19862 <- subset(Histoplasma_ohiensis_Hc19861,class != "Simple_repeat")
-write_tsv(Histoplasma_ohiensis_Hc1986,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiensis_Hc1986.tsv")
+write_tsv(Histoplasma_ohiensis_Hc1986,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiensis_Hc1986.tsv")
 
 Histoplasma_ohiensis_Hc1986class<- Histoplasma_ohiensis_Hc19862 %>% group_by(class) %>%
   summarise(n=n_distinct(ID),
             total=sum(length),
             percentage=total/13148448)
-write_tsv(Histoplasma_ohiensis_Hc1986class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table/Histoplasma_ohiensis_Hc1986class.tsv")
+write_tsv(Histoplasma_ohiensis_Hc1986class,"/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiensis_Hc1986class.tsv")
 Histoplasma_ohiensis_Hc1986class <- read_tsv("/nas/longleaf/home/taniak/taniak/TE_Analysis/RM_Summarize/table_ohi/Histoplasma_ohiensis_Hc1986class.tsv")
 Histoplasma_ohiensis_Hc1986class <- Histoplasma_ohiensis_Hc1986class %>% mutate('Histoplasma ohiensis Hc1986'= percentage)
 Histoplasma_ohiensis_Hc1986class1 <- Histoplasma_ohiensis_Hc1986class %>% select(-c(n,total,percentage))
