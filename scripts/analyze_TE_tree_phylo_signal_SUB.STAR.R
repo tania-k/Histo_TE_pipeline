@@ -2347,6 +2347,8 @@ dev.off()
 #RUN significance tests on tree_AAB
 
 library('phytools')
+
+
 colnames(Complete_TE_short) = gsub("[.]", "_", colnames(Complete_TE_short))
 tree_AAB$tip.label = gsub("[-]", "_", tree_AAB$tip.label)
 all(colnames(Complete_TE_short)  %in% tree_AAB$tip.label)
