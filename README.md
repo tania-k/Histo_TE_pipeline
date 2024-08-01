@@ -44,6 +44,9 @@ Inside you will find my TE pulling/adding script which helps identify, add, and 
 * Also added Phylogenetic signal to each rooted species. Make sure to run the phylogenetic signal analysis for each TE type.
 * I had 7 groups done, RNA TEs, DNA TEs, Simple Repeats, Low Complexity, MITEs, Satellites, and Unknowns. I've seen many disregard Low complexity, simple repeats and unknowns. Up to your discretion. 
 ```
+
+Starship results can also be found here - I followed Emile's description on starfish to run the analysis - https://github.com/egluckthaler/starfish
+
 Good luck! Please message me at taniakurbessoian @ gmail for questions on results.
 
 -T
