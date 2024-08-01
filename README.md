@@ -45,7 +45,8 @@ Inside you will find my TE pulling/adding script which helps identify, add, and 
 * I had 7 groups done, RNA TEs, DNA TEs, Simple Repeats, Low Complexity, MITEs, Satellites, and Unknowns. I've seen many disregard Low complexity, simple repeats and unknowns. Up to your discretion. 
 ```
 
-Starship results can also be found here - I followed Emile's description on starfish to run the analysis - https://github.com/egluckthaler/starfish
+Starship results can also be found in this Histoplasma TE repository.
+I followed Emile's description on starfish to run the analysis - https://github.com/egluckthaler/starfish
 
 Good luck! Please message me at taniakurbessoian @ gmail for questions on results.
 
