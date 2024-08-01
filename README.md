@@ -20,16 +20,9 @@
 3. Follow scripts in order set up in pipeline.
 ```
 * 01_repeatmasker.sh
-* 02_extract_repeats.sh
-* 03_mafft.sh
-* 04_summary.sh
-* 05_repeatlandscape.sh (Only run this if you are interested in Kimura plots to describe your isolates TEs over "time".)
-* 06_EDTA.sh
-* 07_repeatmasker_EDTA.sh
-* 08_EDTA_repeatlandscape.sh
-* 09_summary.sh
+* 02_EDTA.sh
+* 03_repeatmasker_EDTA.sh
 * EDTA.pl
-* EDTA.yml
 ```
 
 What makes my pipeline a little unusual when compared to other TE pipelines, is the use of Repeatmodeler/RepeatMasker + EDTA + Repeatmasker.
