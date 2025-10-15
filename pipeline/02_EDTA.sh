@@ -28,7 +28,7 @@ do
 mkdir -p $OUTDIR/$BASE
 pushd $OUTDIR/$BASE
 GENOME=$(realpath ../../$INDIR/$BASE.scaffolds.fa)
-CDS=$(realpath ../../Blastomyces_parvus_UAMH130.cds.CLEAN.fna)
+CDS=$(realpath ../../Histoplasma_capsulatum_G186A.cds.CLEAN.fna)
 conda activate EDTA
 
 EDTA.pl --genome $GENOME --cds $CDS --species others --step all --sensitive 1 --force 1 --anno 1 --evaluate 1
