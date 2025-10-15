@@ -52,7 +52,7 @@ do
     if [ ! -f $OUTDIR/${name}.RM/${name}.sorted.fasta.tbl ]; then
 	pushd $SCRATCH
 	ln -s $INDIR/${name}.scaffolds.fa
-	RepeatMasker -s -pa $CPU -excln -e ncbi -a -lcambig -source -poly -small -html -gff -dir $OUTDIR/${name}.RM -s -lib $LIBRARY ${name}.scaffolds.fa > $OUTDIR/${name}.RM/${name}.RepeatMasker.out
+	RepeatMasker -s -pa $CPU -excln -e ncbi -a -lcambig -source -poly -small -html -dir $OUTDIR/${name}.RM -s -lib $LIBRARY ${name}.scaffolds.fa > $OUTDIR/${name}.RM/${name}.RepeatMasker.out
     else
 	echo "Skipping ${name} as masked already"
     fi
